@@ -27,7 +27,7 @@ angular.module('myApp.directives', []).
   	return {
   		restrict: "E",
   		replace: true,
-  		template: "<div>hello world!</div>"
+  		template: "<div>{{text}}</div>",
   	};
   })
   .directive('sampleZero', function(){
