@@ -17,9 +17,9 @@ angular.module('myApp.directives', []).
   			else 
   				elem.addClass("background-green");
   		});
-  		console.log($rootScope, "rootscope");
-  		console.log(scope, 'scope');
-  		console.log(attrs, 'attrs');
+  		// console.log($rootScope, "rootscope");
+  		// console.log(scope, 'scope');
+  		// console.log(attrs, 'attrs');
   	};
 
   })
@@ -27,7 +27,11 @@ angular.module('myApp.directives', []).
   	return {
   		restrict: "E",
   		replace: true,
+  		scope: false,
   		template: "<div>{{text}}</div>",
+  		link: function(scope){
+  			console.log(scope, 'scope in dlBlock');
+  		}
   	};
   })
   .directive('sampleZero', function(){
