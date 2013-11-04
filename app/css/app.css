@@ -32,3 +32,12 @@
 .background-green {
   background-color: green;
 }
+
+.block {
+  width: 100px;
+  height: 100px;
+  border: 1px solid green;
+  line-height: 100px;
+  text-align: center;
+  background-color: #EEE;
+}

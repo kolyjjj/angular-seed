@@ -6,7 +6,7 @@ angular.module('myApp.directives', []).
   directive('appVersion', ['version', function(version) {
     return function(scope, elm, attrs) {
       elm.text(version);
-      console.log(scope, 'appversion');
+      // console.log(scope, 'appversion');
     };
   }])
   .directive("clickMe", function($rootScope){
@@ -22,4 +22,31 @@ angular.module('myApp.directives', []).
   		console.log(attrs, 'attrs');
   	};
 
+  })
+  .directive("dlBlock", function(){
+  	return {
+  		restrict: "E",
+  		replace: true,
+  		template: "<div>hello world!</div>"
+  	};
+  })
+  .directive('sampleZero', function(){
+    // Runs during compile
+    return {
+      // name: '',
+      // priority: 0,
+      // terminal: true,
+      // scope: {}, // {} = isolate, true = child, false/undefined = no change
+      // cont­rol­ler: function($scope, $element, $attrs, $transclue) {},
+      // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
+      // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
+      // template: '',
+      // templateUrl: '',
+      // replace: true,
+      // transclude: true,
+      // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
+      // link: function($scope, iElm, iAttrs, controller) {
+      //   console.log('sample zero');
+      // }
+    };
   });
