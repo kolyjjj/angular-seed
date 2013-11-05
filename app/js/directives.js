@@ -28,7 +28,7 @@ angular.module('myApp.directives', []).
   		restrict: "E",
   		replace: true,
   		scope: {
-        text: "@"
+        text: "@myAttr"
       },
   		template: "<div>{{text}}</div>",
   		link: function(scope, elem){
