@@ -27,7 +27,7 @@ angular.module('myApp.directives', []).
   	return {
   		restrict: "E",
   		replace: true,
-  		scope: false,
+  		scope: {},
   		template: "<div>{{text}}</div>",
   		link: function(scope){
   			console.log(scope, 'scope in dlBlock');
