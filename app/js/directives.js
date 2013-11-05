@@ -27,10 +27,13 @@ angular.module('myApp.directives', []).
   	return {
   		restrict: "E",
   		replace: true,
-  		scope: {},
+  		scope: {
+        text: "@"
+      },
   		template: "<div>{{text}}</div>",
-  		link: function(scope){
+  		link: function(scope, elem){
   			console.log(scope, 'scope in dlBlock');
+  			console.log(elem, 'elem in dlBlock');
   		}
   	};
   })
