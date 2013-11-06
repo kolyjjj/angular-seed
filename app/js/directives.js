@@ -28,12 +28,16 @@ angular.module('myApp.directives', []).
   		restrict: "E",
   		replace: true,
   		scope: {
-        text: "@myAttr"
+        localName: "=myAttr"
       },
-  		template: "<div>{{text}}</div>",
+  		template: "<div>{{localName}}</div>",
+      controller: function($scope, $element, $attrs){
+        console.log($scope.localName, 'text in controller');
+      },
   		link: function(scope, elem){
   			console.log(scope, 'scope in dlBlock');
   			console.log(elem, 'elem in dlBlock');
+        console.log(scope.localName, "text in link function");
   		}
   	};
   })
