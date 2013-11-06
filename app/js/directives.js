@@ -33,6 +33,7 @@ angular.module('myApp.directives', []).
   		template: "<div>{{localName}}</div>",
       controller: function($scope, $element, $attrs){
         console.log($scope.localName, 'text in controller');
+        $scope.localName = "hello world";
       },
   		link: function(scope, elem){
   			console.log(scope, 'scope in dlBlock');
