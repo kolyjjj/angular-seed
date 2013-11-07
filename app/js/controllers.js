@@ -5,8 +5,8 @@
 angular.module('myApp.controllers', []).
   controller('MyCtrl1', ['$scope', function($scope) {
   	console.log($scope, 'scope in controller');
-  	$scope.test = function(){
-  		return "Hello";
+  	$scope.test = function(a){
+  		return "Hello" + a;
   	};
   }])
   .controller('MyCtrl2', [function() {

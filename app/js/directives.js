@@ -30,7 +30,7 @@ angular.module('myApp.directives', []).
   		scope: {
         localName: "&"
       },
-  		template: "<div>{{localName()}}</div>",
+  		template: "<div>{{localName({a:1})}}</div>",
       controller: function($scope, $element, $attrs){
         console.log($scope.localName, 'text in controller');
         console.log($scope.localName, 'local name');
@@ -38,7 +38,7 @@ angular.module('myApp.directives', []).
   		link: function(scope, elem){
   			console.log(scope, 'scope in dlBlock');
   			console.log(elem, 'elem in dlBlock');
-        console.log(scope.localName, "text in link function");
+        console.log(scope.localName(1), "text in link function");
   		}
   	};
   })
