@@ -8,6 +8,7 @@ angular.module('myApp.controllers', []).
   	$scope.test = function(a){
   		return "Hello" + a;
   	};
+  	$scope.inputModel = "hello world.";
   }])
   .controller('MyCtrl2', [function() {
   }]);

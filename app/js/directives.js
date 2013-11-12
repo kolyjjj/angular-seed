@@ -41,6 +41,15 @@ angular.module('myApp.directives', []).
         console.log(scope.localName(1), "text in link function");
   		}
   	};
+  }).directive('sayRequire', function(){
+    return {
+      require: 'ngModel',
+      link: function(scope, element, attrs, ngModelController){
+         console.log(ngModelController, "ngModelController");
+         ngModelController.$setViewValue("hello"); 
+         console.log(ngModelController.$modelValue, "model value");
+      }
+    };
   })
   .directive('sampleZero', function(){
     // Runs during compile
